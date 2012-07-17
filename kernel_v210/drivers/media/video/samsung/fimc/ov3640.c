@@ -730,7 +730,7 @@ static struct v4l2_i2c_driver_data v4l2_i2c_data = {
 };
 
 
-MODULE_AUTHOR("sata210 <sata210@gmail.com>");
+MODULE_AUTHOR("sate210 <sate210@gmail.com>");
 MODULE_DESCRIPTION("OV3640 video decoder driver");
 MODULE_LICENSE("GPL");
 

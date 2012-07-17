@@ -684,11 +684,11 @@ static void mmc_sd_attach_bus_ops(struct mmc_host *host)
 {
 	const struct mmc_bus_ops *bus_ops;
 
-//sata210 +
+//sate210 +
 //printk("%s: %s host->caps = 0x%x, 0x%x, %d\n",__FUNCTION__, mmc_hostname(host), host->caps, MMC_CAP_NONREMOVABLE, mmc_assume_removable);
 	if (host->caps & MMC_CAP_NONREMOVABLE || !mmc_assume_removable)
 //	if (host->caps & MMC_CAP_NONREMOVABLE || !mmc_assume_removable || !strcmp(mmc_hostname(host), "mmc0") || !strcmp(mmc_hostname(host), "mmc3"))
-//sata210 -
+//sate210 -
 		bus_ops = &mmc_sd_ops_unsafe;
 	else
 		bus_ops = &mmc_sd_ops;

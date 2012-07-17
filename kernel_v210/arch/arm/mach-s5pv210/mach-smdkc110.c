@@ -765,8 +765,8 @@ static void __init smdkc110_dm9000_set(void)
 #define S5PV210_GPD_0_3_TOUT_3  (0x2 << 12)
 
 
-struct s3cfb_lcd sata210_lcd = {
-#ifdef CONFIG_SATA210_VGA
+struct s3cfb_lcd sate210_lcd = {
+#ifdef CONFIG_SATE210_VGA
 	.width	= 800,
 	.height	= 600,
 	.bpp	= 24,
@@ -838,7 +838,7 @@ struct s3cfb_lcd sata210_lcd = {
 #endif
 
 };
-EXPORT_SYMBOL(sata210_lcd);
+EXPORT_SYMBOL(sate210_lcd);
 
 #if defined(CONFIG_FB_S3C_LTE480WV)||defined(CONFIG_LCD_800X480)
 static void lte480wv_cfg_gpio(struct platform_device *pdev)
@@ -954,7 +954,7 @@ static int lte480wv_reset_lcd(struct platform_device *pdev)
 //};
 #endif
 
-#ifdef CONFIG_SATA210_VGA
+#ifdef CONFIG_SATE210_VGA
 
 static void vga_cfg_gpio(struct platform_device *pdev)
 {
@@ -1020,7 +1020,7 @@ static int vga_reset_lcd(struct platform_device *pdev)
 //};
 #endif
 
-static void sata210_cfg_gpio(struct platform_device *pdev)
+static void sate210_cfg_gpio(struct platform_device *pdev)
 {
 #ifdef CONFIG_FB_S3C_LTE480WV
 	lte480wv_cfg_gpio(pdev);
@@ -1028,13 +1028,13 @@ static void sata210_cfg_gpio(struct platform_device *pdev)
 #ifdef CONFIG_LCD_800X480
 	lte480wv_cfg_gpio(pdev);
 #endif
-#ifdef CONFIG_SATA210_VGA
+#ifdef CONFIG_SATE210_VGA
 	vga_cfg_gpio(pdev);
 #endif
 }
-static int sata210_backlight_on(struct platform_device *pdev)
+static int sate210_backlight_on(struct platform_device *pdev)
 {
-#ifdef CONFIG_SATA210_VGA
+#ifdef CONFIG_SATE210_VGA
 	vga_backlight_on(pdev);
 #endif
 #ifdef CONFIG_FB_S3C_LTE480WV
@@ -1046,9 +1046,9 @@ static int sata210_backlight_on(struct platform_device *pdev)
 	
 }
 
-static int sata210_backlight_off(struct platform_device *pdev)
+static int sate210_backlight_off(struct platform_device *pdev)
 {
-#ifdef CONFIG_SATA210_VGA
+#ifdef CONFIG_SATE210_VGA
 	vga_backlight_off(pdev);
 #endif
 #ifdef CONFIG_FB_S3C_LTE480WV
@@ -1058,9 +1058,9 @@ static int sata210_backlight_off(struct platform_device *pdev)
 	lte480wv_backlight_off(pdev);
 #endif
 }
-static int sata210_reset_lcd(struct platform_device *pdev)
+static int sate210_reset_lcd(struct platform_device *pdev)
 {
-#ifdef CONFIG_SATA210_VGA
+#ifdef CONFIG_SATE210_VGA
 	vga_reset_lcd(pdev);
 #endif
 #ifdef CONFIG_FB_S3C_LTE480WV
@@ -1070,17 +1070,17 @@ static int sata210_reset_lcd(struct platform_device *pdev)
 	lte480wv_reset_lcd(pdev);
 #endif
 }
-static struct s3c_platform_fb sata210_fb_data __initdata = {
+static struct s3c_platform_fb sate210_fb_data __initdata = {
 	.hw_ver	= 0x62,
 	.nr_wins = 5,
 	.default_win = CONFIG_FB_S3C_DEFAULT_WINDOW,
 	.swap = FB_SWAP_WORD | FB_SWAP_HWORD,
 
-	.lcd = &sata210_lcd,
-	.cfg_gpio	= sata210_cfg_gpio,
-	.backlight_on	= sata210_backlight_on,
-	.backlight_onoff    = sata210_backlight_off,
-	.reset_lcd	= sata210_reset_lcd,
+	.lcd = &sate210_lcd,
+	.cfg_gpio	= sate210_cfg_gpio,
+	.backlight_on	= sate210_backlight_on,
+	.backlight_onoff    = sate210_backlight_off,
+	.reset_lcd	= sate210_reset_lcd,
 };
 
 #ifdef CONFIG_S3C64XX_DEV_SPI
@@ -1998,7 +1998,7 @@ static void __init smdkc110_machine_init(void)
 	smdkc110_dm9000_set();
 #endif
 
-	s3cfb_set_platdata(&sata210_fb_data);
+	s3cfb_set_platdata(&sate210_fb_data);
 
 	/* spi */
 #ifdef CONFIG_S3C64XX_DEV_SPI

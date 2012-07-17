@@ -147,10 +147,10 @@ void mmc_request_done(struct mmc_host *host, struct mmc_request *mrq)
 
 EXPORT_SYMBOL(mmc_request_done);
 
-//sata210 +
+//sate210 +
 extern int resume_flag;
 extern unsigned long mmc_last_resume;
-//sata210 -
+//sate210 -
 static void
 mmc_start_request(struct mmc_host *host, struct mmc_request *mrq)
 {

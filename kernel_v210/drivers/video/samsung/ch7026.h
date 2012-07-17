@@ -3,7 +3,7 @@
  *
  * $Id: ch7026.c,v 1.12 2009/09/13 02:13:24 
  *
- * Copyright (C) 2009 sata210 <sata210@gmail.com>
+ * Copyright (C) 2009 sate210 <sate210@gmail.com>
  *
  * This file is subject to the terms and conditions of the GNU General Public
  * License.  See the file COPYING in the main directory of this archive for

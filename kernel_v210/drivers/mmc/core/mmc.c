@@ -20,13 +20,13 @@
 #include "core.h"
 #include "bus.h"
 #include "mmc_ops.h"
-//sata210 +
+//sate210 +
 #include "sd_ops.h"
 #include "sdio_ops.h"
 
 int resume_flag = 0;
 unsigned long mmc_last_resume = 0;
-//sata210 -
+//sate210 -
 
 static const unsigned int tran_exp[] = {
 	10000,		100000,		1000000,	10000000,
@@ -241,22 +241,22 @@ static int mmc_read_ext_csd(struct mmc_card *card)
 			ext_csd[EXT_CSD_SEC_CNT + 1] << 8 |
 			ext_csd[EXT_CSD_SEC_CNT + 2] << 16 |
 			ext_csd[EXT_CSD_SEC_CNT + 3] << 24;
-//sata210 +
+//sate210 +
     if((strncmp(card->cid.prod_name, "SEM02G", 6) != 0) &&
         (strncmp(card->cid.prod_name, "SU08G", 5) != 0))
     {
   		if (card->ext_csd.sectors)
   		  mmc_card_set_blockaddr(card);
   	}
-//sata210 -
+//sate210 -
 	}
 
 	switch (ext_csd[EXT_CSD_CARD_TYPE] & EXT_CSD_CARD_TYPE_MASK) {
 	case EXT_CSD_CARD_TYPE_52 | EXT_CSD_CARD_TYPE_26:
-//sata210 +
+//sate210 +
 //		card->ext_csd.hs_max_dtr = 52000000;
   		card->ext_csd.hs_max_dtr = 35000000;
-//sata210 -
+//sate210 -
 		break;
 	case EXT_CSD_CARD_TYPE_26:
 		card->ext_csd.hs_max_dtr = 26000000;
@@ -659,11 +659,11 @@ static void mmc_attach_bus_ops(struct mmc_host *host)
 {
 	const struct mmc_bus_ops *bus_ops;
 
-//sata210 +
+//sate210 +
 //printk("%s: %s host->caps = 0x%x, 0x%x, %d\n",__FUNCTION__, mmc_hostname(host), host->caps, MMC_CAP_NONREMOVABLE, mmc_assume_removable);
 	if (host->caps & MMC_CAP_NONREMOVABLE || !mmc_assume_removable)
 //	if (host->caps & MMC_CAP_NONREMOVABLE || !mmc_assume_removable || !strcmp(mmc_hostname(host), "mmc0") || !strcmp(mmc_hostname(host), "mmc3"))
-//sata210 -
+//sate210 -
 		bus_ops = &mmc_ops_unsafe;
 	else
 		bus_ops = &mmc_ops;

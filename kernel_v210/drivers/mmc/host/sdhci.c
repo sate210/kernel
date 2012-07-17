@@ -40,9 +40,9 @@
 	defined(CONFIG_MMC_SDHCI_MODULE))
 #define SDHCI_USE_LEDS_CLASS
 #endif
-//sata210 +
+//sate210 +
 #undef SDHCI_USE_LEDS_CLASS
-//sata210 -
+//sate210 -
 
 static unsigned int debug_quirks = 0;
 
@@ -1715,14 +1715,14 @@ int sdhci_suspend_host(struct sdhci_host *host, pm_message_t state)
 
 	sdhci_disable_card_detection(host);
 
-//sata210 +  for sd8787 wifi
+//sate210 +  for sd8787 wifi
 //	if (mmc->card && (mmc->card->type != MMC_TYPE_SDIO))
 #ifndef CONFIG_MRVL8787_SUSPEND_KEEPPOWER
  	if (mmc->card && (mmc->card->type != MMC_TYPE_SDIO))
 #else
 	if (mmc->card)
 #endif
-//sata210 -
+//sate210 -
 		ret = mmc_suspend_host(host->mmc);
 
 	sdhci_mask_irqs(host, SDHCI_INT_ALL_MASK);
@@ -1753,14 +1753,14 @@ int sdhci_resume_host(struct sdhci_host *host)
 	sdhci_init(host, (host->mmc->pm_flags & MMC_PM_KEEP_POWER));
 	mmiowb();
 
-//sata210 +  for sd8787 wifi
+//sate210 +  for sd8787 wifi
 //	if (mmc->card && (mmc->card->type != MMC_TYPE_SDIO))
 #ifndef CONFIG_MRVL8787_SUSPEND_KEEPPOWER
  	if (mmc->card && (mmc->card->type != MMC_TYPE_SDIO))
 #else
 	if (mmc->card)
 #endif
-//sata210 -
+//sate210 -
 		ret = mmc_resume_host(host->mmc);
 
 	sdhci_enable_card_detection(host);

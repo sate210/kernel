@@ -98,13 +98,13 @@ struct mtd_partition s3c_partition_info[] = {
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= (5*SZ_1M),
 	},
-	//sata210++
+	//sate210++
 	{
 		.name		= "system",
 		.offset		= MTDPART_OFS_APPEND,
 		.size		= (150*SZ_1M),
 	},
-	//sata210--
+	//sate210--
 	{
 		.name		= "cache",
 		.offset		= MTDPART_OFS_APPEND,

@@ -653,6 +653,6 @@ static void __exit BMA150_exit(void)
 module_init(BMA150_init);
 module_exit(BMA150_exit);
 
-MODULE_AUTHOR("sata210 <sata210@gmail.com>");
+MODULE_AUTHOR("sate210 <sate210@gmail.com>");
 MODULE_DESCRIPTION("BMA150 driver");
 MODULE_LICENSE("GPL");

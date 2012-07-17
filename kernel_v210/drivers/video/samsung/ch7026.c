@@ -3,7 +3,7 @@
  *
  * $Id: ch7026.c,v 1.12 2009/09/13 02:13:24 
  *
- * Copyright (C) 2009 sata210 <sata210@gmail.com>
+ * Copyright (C) 2009 sate210 <sate210@gmail.com>
  *
  * This file is subject to the terms and conditions of the GNU General Public
  * License.  See the file COPYING in the main directory of this archive for
@@ -217,7 +217,7 @@ static void __exit ch7026_exit(void)
 module_init(ch7026_init);
 module_exit(ch7026_exit);
 
-MODULE_AUTHOR("sata210 <sata210@gmail.com>");
+MODULE_AUTHOR("sate210 <sate210@gmail.com>");
 MODULE_DESCRIPTION("Texas Instruments CH7026 driver");
 MODULE_LICENSE("GPL");
 

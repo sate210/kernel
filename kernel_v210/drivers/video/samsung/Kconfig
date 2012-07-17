@@ -96,8 +96,8 @@ config FB_S3C_HT101HD1
 	---help---
 	  This enables support for HT101HD1 WXVGA(1366*768) LCD panel
 
-config SATA210_VGA
-	bool "SATA210_VGA"
+config SATE210_VGA
+	bool "SATE210_VGA"
 	depends on MACH_SMDKV210
 	help
 	  This enables support for AD7123 VGA(800*600) 

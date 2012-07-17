@@ -507,7 +507,7 @@ static int mmc_sdio_resume(struct mmc_host *host)
 
 	/* Basic card reinitialization. */
 	mmc_claim_host(host);
-//sata210 +
+//sate210 +
 //	err = mmc_sdio_init_card(host, host->ocr, host->card,
 //				 (host->pm_flags & MMC_PM_KEEP_POWER));
 #ifdef CONFIG_MRVL8787
@@ -518,7 +518,7 @@ static int mmc_sdio_resume(struct mmc_host *host)
 #else
 	err = mmc_sdio_init_card(host, host->ocr, host->card, (host->pm_flags & MMC_PM_KEEP_POWER));
 #endif /* CONFIG_MRVL8787 */
-//sata210 -
+//sate210 -
 	if (!err)
 		/* We may have switched to 1-bit mode during suspend. */
 		err = sdio_enable_wide(host->card);
@@ -558,9 +558,9 @@ static const struct mmc_bus_ops mmc_sdio_ops = {
 /*
  * Starting point for SDIO card init.
  */
-//sata210 +
+//sate210 +
  int wifi_rersume_state;
-//sata210 -
+//sate210 -
 int mmc_attach_sdio(struct mmc_host *host, u32 ocr)
 {
 	int err;
@@ -656,13 +656,13 @@ int mmc_attach_sdio(struct mmc_host *host, u32 ocr)
 	if (err)
 		goto remove_added;
 
-//sata210 +
+//sate210 +
   if(strcmp(mmc_hostname(host), "mmc3") == 0)
   {
     wifi_rersume_state = 1;
     printk("mmc_add_card success\n");
   }
-//sata210 -
+//sate210 -
 	/*
 	 * ...then the SDIO functions.
 	 */

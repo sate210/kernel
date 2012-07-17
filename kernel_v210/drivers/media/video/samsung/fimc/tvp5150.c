@@ -727,6 +727,6 @@ static struct v4l2_i2c_driver_data v4l2_i2c_data = {
 	.id_table = tvp5150_id,
 };
 
-MODULE_AUTHOR("sata210 <sata210@gmail.com>");
+MODULE_AUTHOR("sate210 <sate210@gmail.com>");
 MODULE_DESCRIPTION("Texas Instruments TVP5150A video decoder driver");
 MODULE_LICENSE("GPL");
